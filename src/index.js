@@ -1,20 +1,18 @@
 const fs = require('fs')
-const { type } = require('os')
-
+/* const { type } = require('os')
+ */
 /* ---------------------------------------------------------------------- 
 leerArchivoComoString
 Recibe la ruta del archivo que se quiere leer, y devuelve un único string con todo el contenido
 del mismo.
 ---------------------------------------------------------------------- */
-function leerArchivoComoString(ruta) {
+const leerArchivoComoString = (ruta) => {
     console.log('--------------------------------------------')
     console.log('\n------Funcion leerArchivoComoString ----- \n\n')
 
 
     try {
-        //Leo el archivo
         let lectura = fs.readFileSync(ruta, 'utf-8')
-        //muestro lo leido por pantalla
         console.log('La salida de lo leido es: \n\n', lectura)
     }
     catch (error) {
@@ -111,7 +109,8 @@ function transformarArrayDeNumerosAUnSoloString(strings,separador) {
     let array = []
     let cadenaADevolver = ''
     array = strings
-    console.log(`Recibo este array: ${array}`)
+    console.log('Recibo este array: ')
+    console.log(array)
    
     for (i = 0; i <= array.length-1; i++) {
         
@@ -196,5 +195,5 @@ function eliminarDuplicados(arr) {
         index) => arr.indexOf(item) === index)
 }
 
-
-module.exports = {}
+ 
+module.exports = {leerArchivoComoString,escribirTextoEnArchivo,transformarStringEnArrayDeNumeros,transformarArrayDeNumerosAUnSoloString, combinarDosArrays,combinarNArrays}
