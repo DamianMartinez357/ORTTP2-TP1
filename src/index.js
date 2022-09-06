@@ -88,6 +88,7 @@ function transformarStringEnArrayDeNumeros(texto, separador) {
     }
 
     console.log(`Devuelvo array de números: ${arrayNumeros}`)
+    return arrayNumeros
 
 }
 
@@ -122,6 +123,7 @@ function transformarArrayDeNumerosAUnSoloString(strings,separador) {
         }
     }
     console.log(`Devuelvo este String: ${cadenaADevolver}`)
+    return cadenaADevolver
 }
 
 let arrayStrings = [3,7,2236,5,4,3,2,1,0]
@@ -154,7 +156,7 @@ function combinarDosArrays(arrayA,arrayB) {
     arrayADevolver = eliminarDuplicados(arrayADevolver)
 
     console.log(`Combino y devuelvo este Array: ${arrayADevolver}`)
- 
+    return arrayADevolver
 }
 
 let arrayA = [1,2,3,4,5,28]
@@ -183,6 +185,7 @@ function combinarNArrays(arrays) {
     arrayADevolver.sort((a,b) => a - b)
     arrayADevolver = eliminarDuplicados(arrayADevolver)
     console.log(`Combino y devuelvo este Array: ${arrayADevolver}`)
+    return arrayADevolver
 }
 
 let arrayDeArrays = [[1,2,4,10,180], [2,3,15,16],[4,5],[5,6,7,13]]
@@ -192,3 +195,6 @@ function eliminarDuplicados(arr) {
     return arr.filter((item,
         index) => arr.indexOf(item) === index)
 }
+
+
+module.exports = {}
