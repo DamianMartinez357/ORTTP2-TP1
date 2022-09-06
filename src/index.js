@@ -1,12 +1,11 @@
 const fs = require('fs')
-/* const { type } = require('os')
- */
+
 /* ---------------------------------------------------------------------- 
 leerArchivoComoString
 Recibe la ruta del archivo que se quiere leer, y devuelve un único string con todo el contenido
 del mismo.
 ---------------------------------------------------------------------- */
-const leerArchivoComoString = (ruta) => {
+function leerArchivoComoString (ruta) {
     console.log('--------------------------------------------')
     console.log('\n------Funcion leerArchivoComoString ----- \n\n')
 
@@ -188,6 +187,7 @@ function combinarNArrays(arrays) {
 }
 
 let arrayDeArrays = [[1,2,4,10,180], [2,3,15,16],[4,5],[5,6,7,13]]
+
 combinarNArrays(arrayDeArrays)
 
 function eliminarDuplicados(arr) {
